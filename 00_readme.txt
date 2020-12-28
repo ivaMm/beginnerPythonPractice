@@ -158,8 +158,10 @@
     https://www.practicepython.org/exercise/2014/03/12/06-string-lists.html
 
     23. FILE OVERLAP
-    Given two .txt files that have lists of numbers in them, find the numbers that are overlapping. One .txt file has a
-    list of all prime numbers under 1000, and the other .txt file has a list of happy numbers up to 1000.
+    Given two .txt files that have lists of numbers in them, find the numbers that are overlapping. One .txt
+    (http://www.practicepython.org/assets/primenumbers.txt) file has a
+    list of all prime numbers under 1000, and the other .txt file
+    (http://www.practicepython.org/assets/happynumbers.txt) has a list of happy numbers up to 1000.
     If you forgot, prime numbers are numbers that can’t be divided by any other number. And yes, happy numbers are a
     real thing in mathematics - you can look it up on Wikipedia: https://en.wikipedia.org/wiki/Happy_number
 
