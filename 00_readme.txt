@@ -56,7 +56,7 @@
     - Keep the game going until the user types “exit”
     - Keep track of how many guesses the user has taken, and when the game ends, print this out.
 
-    10. LIST OVERLAP COMPREHENSION
+    10. LIST OVERLAP COMPREHENSION # vidi 5...
     Take two lists, say for example these two:
 	a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 	b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
@@ -76,7 +76,7 @@
 	13. FIBONACCI
 	Write a program that asks the user how many Fibonnaci numbers to generate and then generates them. Take this
 	opportunity to think about how you can use functions. Make sure to ask the user to enter the number of numbers in
-	the sequence to generate.(Hint: The Fibonnaci seqence is a sequence of numbers where the next number in the sequence
+	the sequence to generate.(Hint: The Fibonnaci sequence is a sequence of numbers where the next number in the sequence
 	is the sum of the previous two numbers in the sequence. The sequence looks like this: 1, 1, 2, 3, 5, 8, 13, …)
 
 	14. LIST REMOVE DUPLICATES
@@ -186,3 +186,5 @@
     A naive strategy can be to simply start the guessing at 1, and keep going (2, 3, 4, etc.) until you
     hit the number. But that’s not an optimal guessing strategy. An alternate strategy might be to
     guess 50 (right in the middle of the range), and then increase / decrease by 1 as needed.
+
+
