@@ -189,4 +189,168 @@
     hit the number. But that’s not an optimal guessing strategy. An alternate strategy might be to
     guess 50 (right in the middle of the range), and then increase / decrease by 1 as needed.
 
+    26. TIC TAC TOE - CHECK - PART 2 (OF 4)
+    Today, we will simply focus on checking whether someone has WON a game of Tic Tac Toe, not worrying about how the
+    moves were made.
+    If a game of Tic Tac Toe is represented as a list of lists, like so:
+    game = [[1, 2, 0],
+	        [2, 1, 0],
+	        [2, 1, 1]]
+    where a 0 means an empty square, a 1 means that player 1 put their token in that space, and a 2 means that player 2
+    put their token in that space.
+    Your task this week: given a 3 by 3 list of lists that represents a Tic Tac Toe game board, tell me whether anyone
+    has won, and tell me which player won, if any. A Tic Tac Toe win is 3 in a row - either in a row, a column, or a
+    diagonal. Don’t worry about the case where TWO people have won - assume that in every board there will only be one
+    winner.
+    Here are some more examples to work with:
+    winner_is_2 = [[2, 2, 0],
+	               [2, 1, 0],
+	               [2, 1, 1]]
+    winner_is_1 = [[1, 2, 0],
+	               [2, 1, 0],
+	               [2, 1, 1]]
+    winner_is_also_1 = [[0, 1, 0],
+	                    [2, 1, 0],
+	                    [2, 1, 1]]
+    no_winner = [[1, 2, 0],
+	             [2, 1, 0],
+	             [2, 1, 2]]
+    also_no_winner = [[1, 2, 0],
+	                  [2, 1, 0],
+	                  [2, 1, 0]]
+
+	27. TIC TAC TOE - DRAW - PART 3 (OF 4)
+	The next logical step is to deal with handling user input. When a player (say player 1, who is X) wants to place an
+	X on the screen, they can’t just click on a terminal. So we are going to approximate this clicking simply by asking
+	the user for a coordinate of where they want to place their piece.
+	As a reminder, our tic tac toe game is really a list of lists. The game starts out with an empty game board like
+	this:
+    game = [[0, 0, 0],
+	        [0, 0, 0],
+	        [0, 0, 0]]
+    The computer asks Player 1 (X) what their move is (in the format row,col), and say they type 1,3. Then the game
+    would print out
+    game = [[0, 0, X],
+	        [0, 0, 0],
+	        [0, 0, 0]]
+    And ask Player 2 for their move, printing an O in that place.
+    Things to note:
+    For this exercise, assume that player 1 (the first player to move) will always be X and player 2 (the second player)
+    will always be O.
+    Notice how in the example I gave coordinates for where I want to move starting from (1, 1) instead of (0, 0). To
+    people who don’t program, starting to count at 0 is a strange concept, so it is better for the user experience if
+    the row counts and column counts start at 1. This is not required, but whichever way you choose to implement this,
+    it should be explained to the player.
+    Ask the user to enter coordinates in the form “row,col” - a number, then a comma, then a number. Then you can use
+    your Python skills to figure out which row and column they want their piece to be in.
+    Don’t worry about checking whether someone won the game, but if a player tries to put a piece in a game position
+    where there already is another piece, do not allow the piece to go there.
+    Bonus:
+    For the “standard” exercise, don’t worry about “ending” the game - no need to keep track of how many squares are
+    full. In a bonus version, keep track of how many squares are full and automatically stop asking for moves when there
+    are no more valid moves.
+
+    28. MAX OF THREE
+    Implement a function that takes as input three variables, and returns the largest of the three. Do this without
+    using the Python max() function!
+
+    29. TIC TAC TOE - GAME - FINAL (4/4)
+    The next step is to put all these three components together to make a two-player Tic Tac Toe game! Your challenge in
+    this exercise is to use the functions from those previous exercises all together in the same program to make a
+    two-player game that you can play with a friend. There are a lot of choices you will have to make when completing
+    this exercise, so you can go as far or as little as you want with it.
+    Here are a few things to keep in mind:
+    You should keep track of who won - if there is a winner, show a congratulatory message on the screen.
+    If there are no more moves left, don’t ask for the next player’s move!
+    As a bonus, you can ask the players if they want to play again and keep a running tally of who won more - Player 1
+    or Player 2.
+
+    30. PICK A WORD - HANGMAN (1/3)
+    In this exercise, the task is to write a function that picks a random word from a list of words from the SOWPODS
+    dictionary: http://norvig.com/ngrams/sowpods.txt
+    Download this file and save it in the same directory as your Python code. This file is Peter Norvig’s compilation
+    of the dictionary of words used in professional Scrabble tournaments. Each line in the file contains a single word.
+    Hint: use the Python random library for picking a random word.
+    History of SOWPODS: https://en.wikipedia.org/wiki/Collins_Scrabble_Words
+
+    31. GUESS LETTERS - HANGMAN (2/3)
+    Let’s continue building Hangman. In the game of Hangman, a clue word is given by the program that the player has to
+    guess, letter by letter. The player guesses one letter at a time until the entire word has been guessed.
+    (In the actual game, the player can only guess 6 letters incorrectly before losing).
+    Let’s say the word the player has to guess is “EVAPORATE”. For this exercise, write the logic that asks a player to
+    guess a letter and displays letters in the clue word that were guessed correctly. For now, let the player guess an
+    infinite number of times until they get the entire word. As a bonus, keep track of the letters the player guessed
+    and display a different message if the player tries to guess that letter again. Remember to stop the game when all
+    the letters have been guessed correctly! Don’t worry about choosing a word randomly or keeping track of the number
+    of guesses the player has remaining - we will deal with those in a future exercise.
+    An example interaction can look like this:
+    >>> Welcome to Hangman!
+    _ _ _ _ _ _ _ _ _
+    >>> Guess your letter: S
+    Incorrect!
+    >>> Guess your letter: E
+    E _ _ _ _ _ _ _ E
+    ...
+    And so on, until the player gets the word.
+
+    32. HANGMAN (3/3)
+    In this exercise, we will finish building Hangman. In the game of Hangman, the player only has 6 incorrect guesses
+    (head, body, 2 legs, and 2 arms) before they lose the game.
+    In Part 1, we loaded a random word list and picked a word from it. In Part 2, we wrote the logic for guessing the
+    letter and displaying that information to the user. In this exercise, we have to put it all together and add logic
+    for handling guesses.
+    Copy your code from Parts 1 and 2 into a new file as a starting point. Now add the following features:
+    Only let the user guess 6 times, and tell the user how many guesses they have left.
+    Keep track of the letters the user guessed. If the user guesses a letter they already guessed, don’t penalize them
+    - let them guess again.
+    Optional additions:
+    When the player wins or loses, let them start a new game.
+    Rather than telling the user "You have 4 incorrect guesses left", display some picture art for the Hangman. This is
+    challenging - do the other parts of the exercise first!
+    Your solution will be a lot cleaner if you make use of functions to help you!
+
+    33. BIRTHDAY DICTIONARIES - BDAY DATA (1/4)
+    For this exercise, we will keep track of when our friend’s birthdays are, and be able to find that information based
+    on their name. Create a dictionary (in your file) of names and birthdays. When you run your program it should ask
+    the user to enter a name, and return the birthday of that person back to them. The interaction should look something
+    like this:
+    >>> Welcome to the birthday dictionary. We know the birthdays of:
+    Albert Einstein
+    Benjamin Franklin
+    Ada Lovelace
+    >>> Who's birthday do you want to look up?
+    Benjamin Franklin
+    >>> Benjamin Franklin's birthday is 01/17/1706.
+
+    34. BIRTHADAY JSON - BDAY DATA (2/4)
+    In the previous exercise we created a dictionary of famous scientists’ birthdays. In this exercise, modify your
+    program from Part 1 to load the birthday dictionary from a JSON file on disk, rather than having the dictionary
+    defined in the program.
+    Bonus: Ask the user for another scientist’s name and birthday to add to the dictionary, and update the JSON file
+    you have on disk with the scientist’s name. If you run the program multiple times and keep adding new names, your
+    JSON file should keep getting bigger and bigger.
+
+    35. BIRTHDAY MONTHS - BDAY DATA (3/4)
+    In the previous exercise we saved information about famous scientists’ names and birthdays to disk. In this
+    exercise, load that JSON file from disk, extract the months of all the birthdays, and count how many scientists
+    have a birthday in each month.
+    Your program should output something like:
+    {
+	  "May": 3,
+	  "November": 2,
+	  "December": 1
+    }
+
+    36. BIRTHDAY PLOTS - BDAY DATA (4/4)
+    In this exercise, use the bokeh Python library to plot a histogram of which months the scientists have birthdays in!
+    Because it would take a long time for you to input the months of various scientists, you can use my scientist
+    birthday JSON file: https://www.practicepython.org/assets/scientist_birthdays.json
+    Just parse out the months (if you don’t know how, I suggest looking at the previous exercise or
+    its solution) and draw your histogram.
+    INSTALL the bokeh Python package: https://docs.bokeh.org/en/latest/
+    
+
+
+
+
 
