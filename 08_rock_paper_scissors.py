@@ -1,5 +1,7 @@
 import random
 # r > s, s > p, p > r
+
+
 def play():
     print('Hello there!')
     comp = random.choice(['r', 'p', 's'])
