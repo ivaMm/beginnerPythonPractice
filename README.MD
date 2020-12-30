@@ -285,10 +285,11 @@
     won more - Player 1 or Player 2.
 
     30. PICK A WORD - HANGMAN (1/3)
-    In this exercise, the task is to write a function that picks a random word from a list of words from the SOWPODS
-    dictionary: http://norvig.com/ngrams/sowpods.txt
-    Download this file and save it in the same directory as your Python code. This file is Peter Norvig’s compilation
-    of the dictionary of words used in professional Scrabble tournaments. Each line in the file contains a single word.
+    In this exercise, the task is to write a function that picks a random word from a list of words 
+    from the SOWPODS dictionary: http://norvig.com/ngrams/sowpods.txt
+    Download this file and save it in the same directory as your Python code. This file is Peter 
+    Norvig’s compilation of the dictionary of words used in professional Scrabble tournaments. 
+    Each line in the file contains a single word.
     Hint: use the Python random library for picking a random word.
     History of SOWPODS: https://en.wikipedia.org/wiki/Collins_Scrabble_Words
 
