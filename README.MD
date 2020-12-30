@@ -345,7 +345,7 @@
     Benjamin Franklin
     >>> Benjamin Franklin's birthday is 01/17/1706.
 
-    34. BIRTHADAY JSON - BDAY DATA (2/4)
+    34. BIRTHDAY JSON - BDAY DATA (2/4)
     In the previous exercise we created a dictionary of famous scientists’ birthdays. In this 
     exercise, modify your program from Part 1 to load the birthday dictionary from a JSON file on 
     disk, rather than having the dictionary defined in the program.
