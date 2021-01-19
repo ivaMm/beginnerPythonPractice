@@ -1,7 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 
-
 def decode_web(web_page):
     page = requests.get(web_page)
     soup = BeautifulSoup(page.content, 'html.parser')
